@@ -14,7 +14,7 @@ app.use(express.json())
 const questionsRouter = require('./routes/questions')
 app.use('/questions', questionsRouter)
 
-const responsesRouter = require('./routes/responses')
-app.use('/responses', responsesRouter)
+const answersRouter = require('./routes/answers')
+app.use('/answers', answersRouter)
 
 app.listen(3001, () => console.log('Server Started'))

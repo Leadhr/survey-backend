@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Responses = require('../models/responses')
+const Answers = require('../models/answers')
 
 //Getting all
 // router.get('/', async (req, res) => {
@@ -12,29 +12,29 @@ const Responses = require('../models/responses')
 //   }
 // })
 // Getting one
-router.get('/:id', getResponse, (req, res) => {
-  res.json(res.response)
+router.get('/:id', getAnswer, (req, res) => {
+  res.json(res.answer)
 })
 //Creating one
 router.post('/', async (req, res) => {
-  const response = new Responses({
+  const answer = new Answers({
     answers: req.body.answers,
   })
   try {
-    const newResponse = await response.save()
-    res.status(201).json(newResponse)
+    const newAnswer = await answer.save()
+    res.status(201).json(newAnswer)
   } catch (err) {
     res.status(400).json({ message: err.message })
   }
 })
 //Updating one
-router.patch('/:id', getResponse, async (req, res) => {
+router.patch('/:id', getAnswer, async (req, res) => {
   if (req.body.answers != null) {
-    res.response.answers = req.body.answers
+    res.answer.answers = req.body.answers
   }
   try {
-    const updatedResponse = await res.response.save()
-    res.json(updatedResponse)
+    const updatedAnswer = await res.answer.save()
+    res.json(updatedAnswer)
   } catch {
     res.status(400).json({message: err.message})
   }
@@ -49,18 +49,18 @@ router.patch('/:id', getResponse, async (req, res) => {
 //   }
 // })
 
-async function getResponse(req, res, next) {
-  let response
+async function getAnswer(req, res, next) {
+  let answer
   try {
-    response = await Responses.findById(req.params.id)
-    if (response == null) {
+    answer = await Answers.findById(req.params.id)
+    if (answer == null) {
       return res.status(404).json({message: 'Cannot find response'})
     }
   } catch (err) {
       return res.status(500).json({ message: err.message })
   }
 
-  res.response = response
+  res.answer = answer
   next()
 
 }

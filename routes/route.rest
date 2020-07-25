@@ -1,5 +1,5 @@
 
-PATCH http://localhost:3001/responses/5f1c3c66fc06b11d0c33cc5a
+POST http://localhost:3001/answers
 Content-Type: application/json
 
 {
@@ -10,4 +10,4 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3001/responses/5f1c3c66fc06b11d0c33cc5a
+GET http://localhost:3001/answers/5f1c4593c4d0a422ca02474f
