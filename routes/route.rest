@@ -10,4 +10,4 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3001/answers/5f1c4593c4d0a422ca02474f
+GET http://localhost:3001/questions
