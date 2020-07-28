@@ -18,6 +18,7 @@ router.get('/:id', getAnswer, (req, res) => {
 //Creating one
 router.post('/', async (req, res) => {
   const answer = new Answers({
+    name: req.body.name,
     answers: req.body.answers,
   })
   try {
