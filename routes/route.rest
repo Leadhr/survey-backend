@@ -1,25 +1,7 @@
-
-POST http://localhost:3001/
-Content-Type: application/json
-
-{   
-    "name": "bob",
-    "answers": [
-        [2, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-    ]
-}
-
-###
-
-GET http://localhost:3001/questions
-
-### 
-
 POST http://localhost:3001/api/auth/register_login
-
 Content-Type: application/json
 
 {   
-    "email": "bob",
-    "password": "password"
+    "email": "test@test.com",
+    "password": "test"
 }

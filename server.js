@@ -42,7 +42,7 @@ app.use(passport.session());
 
 // Routes
 
-app.use("/api/auth", auth)
+app.use("/api/auth", auth);
 
 const questionsRouter = require("./routes/questions");
 app.use("/questions", questionsRouter);
