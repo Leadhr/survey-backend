@@ -1,5 +1,5 @@
 
-POST http://localhost:3001/answers
+POST http://localhost:3001/
 Content-Type: application/json
 
 {   
@@ -12,3 +12,14 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3001/questions
+
+### 
+
+POST http://localhost:3001/api/auth/register_login
+
+Content-Type: application/json
+
+{   
+    "email": "bob",
+    "password": "password"
+}
